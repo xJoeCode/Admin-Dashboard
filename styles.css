@@ -1,6 +1,6 @@
 :root{
     --main-color:rgb(255, 215, 129);
-    --main-font-size:font-family: 'Sen', sans-serif;
+    --main-font-family:font-family: 'Sen', sans-serif;
 }
 
 body{
@@ -14,7 +14,7 @@ body{
 
 .sidebar{
     background-color: var(--main-color);
-    grid-row: 1/5;
+    grid-row: 1/6;
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -23,7 +23,7 @@ body{
 
 .directory1 Li, .logo{
     list-style: none;
-    font-family: var(--main-font-size);
+    font-family: var(--main-font-family);
     font-size: 1.5rem;
     cursor: pointer;
     margin: 10%;
@@ -34,7 +34,7 @@ body{
 }
 
 .topRightHeader p, .bottomLeftHeader p:nth-child(3) {
-    font-family: var(--main-font-size);
+    font-family: var(--main-font-family);
     font-weight: bold;
     font-size:  1rem;
     cursor: pointer;
@@ -61,7 +61,7 @@ body{
 #search{
     appearance: none;
     -webkit-appearance: none;
-    font-family: var(--main-font-size)
+    font-family: var(--main-font-family)
     border-radius: 10px;
     background-color: rgb(202, 202, 202);
     border-style: none;
@@ -78,7 +78,7 @@ svg{
 color: rgb(68, 68, 68);
 position: absolute;
 top: 5px;
-left: -20px;
+left: -30px;
 }
 
 .topRightHeader{
@@ -114,9 +114,8 @@ img{
 }
 
 .bottomRightHeader{
-justify-self: end;
-align-self: end;
-
+    justify-self: end;
+    align-self: end;
 }
 
 .bottomRightHeader button{
@@ -129,28 +128,45 @@ align-self: end;
     cursor: pointer;
 }
 
+.mainBody{
+    grid-column: 2/5;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
 .projectShowcase {
     display: grid;
-    grid-column: 2/3;
-    grid-template-columns: 1fr, repeat(auto-fit, 2fr);
+    grid-column: 1/2;
+    grid-row: 1/3;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-rows: repeat(auto-fit, 1fr);
     background-color: rgb(223, 223, 223);
-    font-family: var(--main-font-size);
+    align-content: start;
     gap: 1rem;
     padding: 5%;
- 
+
 }
 
 .announcementShowcase {
     display: grid;
+    grid-column: 2/3;
     grid-template-columns: repeat(auto-fit, 1fr);
-    grid-column: -1/-2;
+    background-color:rgb(223, 223, 223);
+    align-content: start;
+    gap: 1rem;
+    padding: 5%;  
+}
+
+.trendingShowcase{
+    display: grid;
+    grid-column: 2/3;
+    grid-template-columns: repeat(auto-fit, 1fr);
     background-color:rgb(223, 223, 223);
     gap: 1rem;
     padding: 5%;
-    
 }
 
-.projectShowcase div, .announcementShowcase div {
+.projectShowcase div, .announcementShowcase div, .trendingShowcase div {
     background-color: rgb(255, 255, 255);
     font-family: var(--main-font-size);
     font-weight: bold;
@@ -158,16 +174,24 @@ align-self: end;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    padding: 5%;
-    
+    padding: 10%;
+}
+
+.projectShowcase p  {
+    font-weight:100;
+}
+
+.announcementShowcase p, .trendingShowcase p{
+    font-size: 0.7rem;
+    font-weight: 100;
+    padding-bottom: 15%;
+    border-bottom: 2px solid rgb(63, 63, 63);
 }
 
 .projectShowcase h1 {
     font-family: var(--main-font-size);
     font-size: 1.6rem;
-    grid-column: 1/4;
-    display: inline-block;
-    place-self: start start;
+    grid-column: 1/3;
 }
 
 .announcementShowcase h1{
@@ -176,9 +200,10 @@ align-self: end;
     top: 1%;
 }
 
-.announcementShowcase h2{
+ h2{
     font-family: var(--main-font-size);
-    font-size: 1.6rem;
+    font-size: 1rem;
+    
     
 }
 
@@ -186,10 +211,6 @@ align-self: end;
     border: 10px darkgoldenrod;
 }
 
-.projectShowcase p, .announcementShowcase p  {
-    font-weight:100;
-}
 
-.trending{
-    grid-row: 5/6;
-}
+
+
