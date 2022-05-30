@@ -129,38 +129,67 @@ align-self: end;
     cursor: pointer;
 }
 
-.projectShowcase{
+.projectShowcase {
     display: grid;
     grid-column: 2/3;
-    grid-template-rows:repeat(auto-fit, 1fr);
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: 1fr, repeat(auto-fit, 2fr);
     background-color: rgb(223, 223, 223);
+    font-family: var(--main-font-size);
     gap: 1rem;
-    padding: 40px;
-    position: relative;
+    padding: 5%;
+ 
 }
 
-.projectShowcase div {
+.announcementShowcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 1fr);
+    grid-column: -1/-2;
+    background-color:rgb(223, 223, 223);
+    gap: 1rem;
+    padding: 5%;
+    
+}
+
+.projectShowcase div, .announcementShowcase div {
     background-color: rgb(255, 255, 255);
     font-family: var(--main-font-size);
     font-weight: bold;
-    padding: 10px;
-    margin-top: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 5%;
     
 }
 
 .projectShowcase h1 {
     font-family: var(--main-font-size);
     font-size: 1.6rem;
-    position: absolute;
-    left: 5%;
+    grid-column: 1/4;
+    display: inline-block;
+    place-self: start start;
+}
+
+.announcementShowcase h1{
+    font-family: var(--main-font-size);
+    font-size: 1.6rem;
     top: 1%;
+}
+
+.announcementShowcase h2{
+    font-family: var(--main-font-size);
+    font-size: 1.6rem;
+    
 }
 
 .projectShowcase:hover{
     border: 10px darkgoldenrod;
 }
 
-.projectShowcase p {
-    font-weight: 100;
+.projectShowcase p, .announcementShowcase p  {
+    font-weight:100;
+}
+
+.trending{
+    grid-row: 5/6;
 }
