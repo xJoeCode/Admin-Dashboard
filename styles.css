@@ -22,7 +22,14 @@ body{
     align-content:space-around;
 }
 
+
+.directory1 {
+    position: relative;
+}
+
 .directory1 Li, .logo{
+    display: flex;
+    gap: 10px;
     list-style: none;
     font-family: var(--main-font-family);
     font-size: 1.5rem;
