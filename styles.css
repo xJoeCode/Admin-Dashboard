@@ -1,5 +1,6 @@
 :root{
     --main-color:rgb(255, 215, 129);
+    --main-color-2:rgb(255, 189, 47);
     --main-font-family:font-family: 'Sen', sans-serif;
 }
 
@@ -121,11 +122,16 @@ img{
 .bottomRightHeader button{
     width: 80px;
     height: 40px;
-    border-radius: 30%;
+    border-radius: 15%;
+    margin: 5px;
+    box-shadow: 0.2em 0.2em 0.5em rgb(197, 197, 197);
     border: none;
-    
     background-color: var(--main-color);
     cursor: pointer;
+}
+
+.bottomRightHeader button:hover{
+    background-color: var(--main-color-2);
 }
 
 .mainBody{
@@ -144,7 +150,6 @@ img{
     align-content: start;
     gap: 1rem;
     padding: 5%;
-
 }
 
 .announcementShowcase {
@@ -170,15 +175,22 @@ img{
     background-color: rgb(255, 255, 255);
     font-family: var(--main-font-size);
     font-weight: bold;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: center;
+    position: relative;
     border-left: 12px solid var(--main-color);
     cursor: pointer;
     box-shadow: 0.5em 0.5em 1em rgb(197, 197, 197);
     padding: 10%;
 }
+
+.projectShowcase div:hover, .announcementShowcase div:hover, .trendingShowcase div:hover{
+    border-left: 12px solid var(--main-color-2);
+    
+}
+
 
 .projectShowcase p  {
     font-weight:100;
@@ -210,9 +222,7 @@ img{
     
 }
 
-.projectShowcase:hover{
-    border: 10px darkgoldenrod;
-}
+
 
 
 
