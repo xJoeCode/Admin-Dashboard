@@ -255,7 +255,7 @@ bottom: 15%;
     padding: 1%;
     border-radius: 10px;
     background-color: rgb(230, 230, 230);
-    align-self: flex-start;
+    align-self: stretch;
 }
 
 .profile:hover{
